@@ -16,7 +16,7 @@ public class Application
         Date = DateTime.Now;
     }
 
-    public Guid Id { get; }
+    public ApplicationId Id { get; }
     public Guid UserId { get; }
     public ActivityType Activity { get; private set; }
     public string Title { get; private set; }

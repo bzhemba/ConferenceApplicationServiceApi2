@@ -10,7 +10,7 @@ public record ApplicationId
     {
         if (value == Guid.Empty)
         {
-            throw new EmptyApplicationListIdException();
+            throw new EmptyApplicationIdException();
         }
             
         Value = value;

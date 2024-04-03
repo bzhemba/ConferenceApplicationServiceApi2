@@ -1,10 +1,12 @@
 using ApplicationsService.Abstractions.Queries;
 using ApplicationsService.Application.DTO;
+using ApplicationsService.Application.Queries.GetByIdQuery;
 using ApplicationsService.Domain.Repositories;
+using ApplicationsService.Infrastructure.EF.Models;
 
-namespace ApplicationsService.Application.Queries.GetByIdQuery;
+namespace ApplicationsService.Infrastructure.Queries.Handlers;
 
-public class GetApplicationQueryHandler : IQueryHandler<GetApplicationQuery, ApplicationDto>
+public class GetApplicationQueryHandler : IQueryHandler<GetApplicationQuery, ApplicationReadModel>
 {
     private IApplicationsRepository _repository;
 
@@ -13,7 +15,7 @@ public class GetApplicationQueryHandler : IQueryHandler<GetApplicationQuery, App
         _repository = repository;
     }
 
-    public Task<ApplicationDto> HandleAsync(GetApplicationQuery query)
+    public Task<ApplicationReadModel> HandleAsync(GetApplicationQuery query)
     {
         var application = _repository.GetByIdAsync(query.Id);
         return application?.AsDto();

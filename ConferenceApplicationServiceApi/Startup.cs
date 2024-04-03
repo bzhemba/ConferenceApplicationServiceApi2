@@ -1,4 +1,5 @@
 using ApplicationsService.Application;
+using ApplicationsService.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,6 +24,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddApplication();
+        services.AddInfrastructure();
         services.AddControllers();
             
         services.AddSwaggerGen(c =>
