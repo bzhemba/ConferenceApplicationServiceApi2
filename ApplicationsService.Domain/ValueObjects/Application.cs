@@ -4,7 +4,7 @@ namespace ApplicationsService.Domain.ValueObjects;
 
 public class Application
 {
-    public Application(Guid id, Guid userId, ActivityType activity, string title, string? description, string outline)
+    public Application(ApplicationId id, Guid userId, ActivityType activity, string title, string? description, string outline)
     {
         Id = id;
         UserId = userId;

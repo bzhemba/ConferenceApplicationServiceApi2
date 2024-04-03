@@ -1,13 +1,11 @@
+using ApplicationsService.Domain.Consts;
 using ApplicationsService.Domain.Entities;
 using ApplicationsService.Domain.ValueObjects;
 using ApplicationId = ApplicationsService.Domain.ValueObjects.ApplicationId;
 
 namespace ApplicationsService.Domain.Factories;
 
-public class ApplicationsListFactory : IApplicationsListFactory
+public interface IApplicationFactory
 {
-    public ApplicationsList Create(ApplicationId id)
-    {
-        throw new NotImplementedException();
-    }
+    Application Create(ApplicationId id, Guid userId, ActivityType activity, string title, string? description, string outline);
 }
