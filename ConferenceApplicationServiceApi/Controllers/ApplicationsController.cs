@@ -46,7 +46,7 @@ public class ApplicationsController : BaseController
         public async Task<IActionResult> Post([FromBody] CreateApplicationCommand command)
         {
             await _commandDispatcher.DispatchAsync(command);
-            return CreatedAtAction(nameof(Get), new {id = command.id}, null);
+            return CreatedAtAction(nameof(Get), new {id = command.userId}, null);
         }
         
         [HttpPut("{id:guid}/send")]
