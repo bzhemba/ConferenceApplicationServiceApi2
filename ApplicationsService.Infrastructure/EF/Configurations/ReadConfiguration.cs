@@ -11,7 +11,6 @@ internal sealed class ReadConfiguration : IEntityTypeConfiguration<ApplicationRe
     {
         builder.ToTable("Applications");
         builder.HasKey(a => a.Id);
-        
     }
 
     public void Configure(EntityTypeBuilder<ActivitiesReadModel> builder)

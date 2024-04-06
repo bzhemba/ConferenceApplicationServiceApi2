@@ -13,15 +13,15 @@ internal sealed class DeleteApplicationCommandHandler : ICommandHandler<DeleteAp
 
     public async Task HandleAsync(DeleteApplicationCommand command)
     {
-        var application = await _repository.GetByIdAsync(command.Id);
+        var application = await _repository.GetByIdAsync(command.id);
 
         if (application is null)
         {
-            throw new ApplicationNotFoundException(command.Id);
+            throw new ApplicationNotFoundException(command.id);
         }
         if (application.WasSent)
         {
-            throw new EnableToEditOrDeleteApplicationException(command.Id);
+            throw new EnableToEditOrDeleteApplicationException(command.id);
         }
 
         await _repository.DeleteAsync(application);

@@ -28,7 +28,7 @@ public class ApplicationsController : BaseController
             var result = await _queryDispatcher.QueryAsync(query);
             return OkOrNotFound(result);
         }
-        [HttpGet("{userId:guid}")]
+        [HttpGet("userid/{userId:guid}")]
         public async Task<ActionResult<ApplicationDto>> Get([FromRoute] GetApplicationByUserIdQuery query)
         {
             var result = await _queryDispatcher.QueryAsync(query);
@@ -49,7 +49,7 @@ public class ApplicationsController : BaseController
             return CreatedAtAction(nameof(Get), new {id = command.id}, null);
         }
         
-        [HttpPut("{id:guid}/application")]
+        [HttpPut("{id:guid}/send")]
         public async Task<IActionResult> Put([FromBody] SendApplicationCommand command)
         {
             await _commandDispatcher.DispatchAsync(command);

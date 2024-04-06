@@ -1,9 +1,1 @@
-POST  https://localhost:5021/api/Applications
-{
-  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "title": "string",
-  "activity": "",
-  "description": "string",
-  "outline": "string"
-}
+PUT https://localhost:5021/api/Applications/3fa85f64-5717-4562-b3fc-2c963f66afa6/send

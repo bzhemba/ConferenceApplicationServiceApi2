@@ -31,4 +31,12 @@
       <ProjectReference Include="..\ApplicationsService.Infrastructure\ApplicationsService.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Include="Properties\Web.config">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
