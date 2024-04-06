@@ -56,7 +56,7 @@ public class ApplicationsController : BaseController
             return Ok();
         }
         
-        [HttpPut("{packingListId:guid}/application")]
+        [HttpPut("{packingListId:guid}/edit")]
         public async Task<IActionResult> Put([FromBody] EditApplicationCommand command)
         {
             await _commandDispatcher.DispatchAsync(command);

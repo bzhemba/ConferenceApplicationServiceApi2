@@ -21,6 +21,8 @@ internal sealed class SendApplicationCommandHandler : ICommandHandler<SendApplic
             throw new ApplicationNotFoundException(command.id);
         }
 
-        await _repository.ChangeStatusAsync(application);
+        var submitted_application = application;
+        submitted_application.ChangeStatus();
+        await _repository.ChangeStatusAsync(submitted_application);
     }
 }
