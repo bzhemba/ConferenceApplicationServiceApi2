@@ -10,4 +10,5 @@ public class ApplicationDto
     public string Activity { get; set; }
     public string? Description  { get; set; }
     public string Outline { get; set; }
+    public DateTime DateTime { get; set; }
 }

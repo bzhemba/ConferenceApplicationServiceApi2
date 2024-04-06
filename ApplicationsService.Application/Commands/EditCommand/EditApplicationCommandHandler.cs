@@ -1,6 +1,7 @@
 using ApplicationsService.Abstractions.Commands;
 using ApplicationsService.Application.Commands.CreateCommand;
 using ApplicationsService.Application.Exceptions;
+using ApplicationsService.Domain.Consts;
 using ApplicationsService.Domain.Factories;
 using ApplicationsService.Domain.Repositories;
 
@@ -25,13 +26,13 @@ internal sealed class EditApplicationCommandHandler : ICommandHandler<EditApplic
         {
             throw new ApplicationNotFoundException(command.id);
         }
-        if (application.WasSentStatus)
+        if (application.WasSent)
         {
             throw new EnableToEditOrDeleteApplicationException(command.id);
         }
         if (command.description != null) application.ChangeDescription(command.description);
         application.ChangeTitle(command.title);
-        application.ChangeActivity(command.activity);
+        application.ChangeActivity((ActivityType)Enum.Parse(typeof(ActivityType), command.activity));
         application.ChangePlan(command.outline);
         await _repository.EditAsync(application);
     }

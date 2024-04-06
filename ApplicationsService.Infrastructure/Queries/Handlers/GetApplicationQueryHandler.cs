@@ -2,22 +2,25 @@ using ApplicationsService.Abstractions.Queries;
 using ApplicationsService.Application.DTO;
 using ApplicationsService.Application.Queries.GetByIdQuery;
 using ApplicationsService.Domain.Repositories;
+using ApplicationsService.Infrastructure.EF.Contexts;
 using ApplicationsService.Infrastructure.EF.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApplicationsService.Infrastructure.Queries.Handlers;
 
-public class GetApplicationQueryHandler : IQueryHandler<GetApplicationQuery, ApplicationReadModel>
+internal sealed class GetApplicationQueryHandler : IQueryHandler<GetApplicationQuery, ApplicationDto>
 {
-    private IApplicationsRepository _repository;
+    private readonly DbSet<ApplicationReadModel> _applications;
 
-    public GetApplicationQueryHandler(IApplicationsRepository repository)
+    public GetApplicationQueryHandler(ReadDbContext context)
     {
-        _repository = repository;
+        _applications = context.Applications;
     }
 
-    public Task<ApplicationReadModel> HandleAsync(GetApplicationQuery query)
-    {
-        var application = _repository.GetByIdAsync(query.Id);
-        return application?.AsDto();
-    }
+    public Task<ApplicationDto> HandleAsync(GetApplicationQuery query)
+        => _applications
+            .Where(application => application.Id == query.Id)
+            .Select(application => application.AsDto())
+            .AsNoTracking()
+            .SingleOrDefaultAsync();
 }

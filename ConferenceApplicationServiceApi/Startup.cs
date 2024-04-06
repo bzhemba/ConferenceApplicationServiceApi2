@@ -1,3 +1,4 @@
+using ApplicationService.Shared;
 using ApplicationsService.Application;
 using ApplicationsService.Infrastructure;
 using Microsoft.AspNetCore.Builder;
@@ -23,8 +24,9 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddShared();
         services.AddApplication();
-        services.AddInfrastructure();
+        services.AddInfrastructure(Configuration);
         services.AddControllers();
             
         services.AddSwaggerGen(c =>
@@ -38,9 +40,11 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PackIT.Api v1"));
         }
+        
         app.UseSwagger();
+        app.UseSwaggerUI();
+
         app.UseHttpsRedirection();
 
         app.UseRouting();

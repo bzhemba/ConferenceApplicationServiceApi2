@@ -7,6 +7,6 @@ public record EditApplicationCommand(
     Guid id,
     Guid userId,
     string title,
-    ActivityType activity,
+    string activity,
     string? description,
     string outline) : ICommand;

@@ -1,4 +1,5 @@
 using ApplicationsService.Abstractions.Commands;
+using ApplicationsService.Domain.Consts;
 using ApplicationsService.Domain.Factories;
 using ApplicationsService.Domain.Repositories;
 
@@ -18,8 +19,8 @@ internal sealed class CreateApplicationCommandHandler : ICommandHandler<CreateAp
     public async Task HandleAsync(CreateApplicationCommand command)
     {
         var (id, userId, title, activity, description, outline) = command;
-
-        var application = _factory.Create(id, userId, activity, title, description, outline);
+        ActivityType activity_formatted = (ActivityType)Enum.Parse(typeof(ActivityType), activity);
+        var application = _factory.Create(id, userId, activity_formatted, title, description, outline);
         await _repository.AddAsync(application);
     }
 }

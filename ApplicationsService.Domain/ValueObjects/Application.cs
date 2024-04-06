@@ -12,7 +12,7 @@ public class Application
         Title = title;
         Description = description;
         Outline = outline;
-        WasSentStatus = false;
+        WasSent = false;
         Date = DateTime.Now;
     }
 
@@ -22,7 +22,7 @@ public class Application
     public string Title { get; private set; }
     public string? Description { get; private set; }
     public string Outline { get; private set; }
-    public bool WasSentStatus { get; private set; }
+    public bool WasSent { get; private set; }
     public DateTime Date { get; }
     public void ChangeDescription(string newDescription)
     {
@@ -44,6 +44,6 @@ public class Application
 
     public void ChangeStatus()
     {
-        WasSentStatus = true;
+        WasSent = true;
     }
 }

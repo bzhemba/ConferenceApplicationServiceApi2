@@ -19,7 +19,7 @@ internal sealed class DeleteApplicationCommandHandler : ICommandHandler<DeleteAp
         {
             throw new ApplicationNotFoundException(command.Id);
         }
-        if (application.WasSentStatus)
+        if (application.WasSent)
         {
             throw new EnableToEditOrDeleteApplicationException(command.Id);
         }

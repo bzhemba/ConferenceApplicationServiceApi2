@@ -1,5 +1,6 @@
 using ApplicationService.Shared.Queries;
 using ApplicationsService.Abstractions.Commands;
+using ApplicationsService.Infrastructure.EF;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,8 +12,6 @@ public static class Extensions
     {
         services.AddPostgres(configuration);
         services.AddQueries();
-
-        services.TryDecorate(typeof(ICommandHandler<>), typeof(LoggingCommandHandlerDecorator<>));
             
         return services;
     }

@@ -1,5 +1,4 @@
 using ApplicationsService.Domain.Consts;
-using ApplicationsService.Domain.Entities;
 using ApplicationsService.Domain.ValueObjects;
 using ApplicationId = ApplicationsService.Domain.ValueObjects.ApplicationId;
 

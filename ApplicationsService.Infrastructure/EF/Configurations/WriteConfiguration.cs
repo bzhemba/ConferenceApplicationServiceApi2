@@ -20,10 +20,7 @@ internal sealed class WriteConfiguration : IEntityTypeConfiguration<Domain.Value
         
         
         builder.Property(application => application.UserId).IsRequired();
-        builder.Property(application => application.Activity)
-            .HasConversion(
-                activity => activity.ToString(),
-                activity => (ActivityType)Enum.Parse(typeof(ActivityType), activity));
+        builder.Property(application => application.Date).IsRequired();
         builder.Property(application => application.Title).HasMaxLength(100)
             .IsRequired();
         builder.Property(application => application.Description)
@@ -35,6 +32,7 @@ internal sealed class WriteConfiguration : IEntityTypeConfiguration<Domain.Value
 
     public void Configure(EntityTypeBuilder<Activity> builder)
     {
+        builder.HasNoKey();
         builder.Property(ac => ac.Type);
         builder.ToTable("Activities");
     }
