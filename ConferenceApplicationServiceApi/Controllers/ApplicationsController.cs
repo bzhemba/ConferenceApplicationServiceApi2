@@ -50,7 +50,7 @@ public class ApplicationsController : BaseController
         }
         
         [HttpPut("{id:guid}/send")]
-        public async Task<IActionResult> Put([FromBody] SendApplicationCommand command)
+        public async Task<IActionResult> Put([FromRoute] SendApplicationCommand command)
         {
             await _commandDispatcher.DispatchAsync(command);
             return Ok();
