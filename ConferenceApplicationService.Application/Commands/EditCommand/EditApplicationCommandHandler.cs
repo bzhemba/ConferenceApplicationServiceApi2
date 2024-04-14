@@ -1,5 +1,4 @@
 using ApplicationsService.Abstractions.Commands;
-using ApplicationsService.Application.Commands.CreateCommand;
 using ApplicationsService.Application.Exceptions;
 using ApplicationsService.Domain.Consts;
 using ApplicationsService.Domain.Exceptions;
@@ -41,7 +40,7 @@ internal sealed class EditApplicationCommandHandler : ICommandHandler<EditApplic
             throw new EmptyUserIdException();
         }
 
-        if (application.Activity != null ||
+        if (application.Title != null ||
             application.Activity != null || application.Description != null || application.Outline != null)
         {
             await _repository.EditAsync(application);

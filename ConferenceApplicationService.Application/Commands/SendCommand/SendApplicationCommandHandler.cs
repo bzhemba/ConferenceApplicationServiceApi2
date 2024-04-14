@@ -1,5 +1,4 @@
 using ApplicationsService.Abstractions.Commands;
-using ApplicationsService.Application.Commands.DeleteCommand;
 using ApplicationsService.Application.Exceptions;
 using ApplicationsService.Domain.Repositories;
 
@@ -23,6 +22,11 @@ internal sealed class SendApplicationCommandHandler : ICommandHandler<SendApplic
 
         var submitted_application = application;
         submitted_application.ChangeStatus();
-        await _repository.ChangeStatusAsync(submitted_application);
+        if (application.Title != null && application.Activity != null &&  application.Outline != null)
+        {
+            await _repository.ChangeStatusAsync(submitted_application);
+        }
+
+        throw new EmptyRequiredApplicationFieldsException(application.Id);
     }
 }
