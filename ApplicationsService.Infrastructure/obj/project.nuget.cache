@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WucrVbEb6gwurzdDwIIFyBRJUgt8Dv0bP+EY0geDcnpvAos8a26/eFy3Yo1oUX+YxM5V+YzUl6AyG2dydVWFyA==",
+  "dgSpecHash": "xqibf63vmQJFeAnxZqlvsfoPrq7Nnvd0UcIqjJ+pvLbgTWGXTwoEFYNtBp5nmeq5oeMq/P9T+oMa/UMApYqk7Q==",
   "success": true,
   "projectFilePath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Infrastructure/ApplicationsService.Infrastructure.csproj",
   "expectedPackageFiles": [

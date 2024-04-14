@@ -1,5 +1,3 @@
-using ApplicationsService.Domain.Consts;
-
 namespace ApplicationsService.Infrastructure.EF.Models;
 
 public class EnumReadModel

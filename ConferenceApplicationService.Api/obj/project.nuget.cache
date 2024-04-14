@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fJ2+HoGEQn1FCXRopSDSAinSTCjSBRG7xtENNvhkd4xHbc40lt6aVemlU6e8pzi1m0vd5ksk16r2TV67A2f3Bw==",
+  "dgSpecHash": "v/rg8q18mKXAEG/Nd+dKK9HLHIsOBs9Fi//nHl/XqpjO74aeUyUvYSIFubk1PF2gmUMjL6oCjTDhHplk7DbpNg==",
   "success": true,
   "projectFilePath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Api/ConferenceApplicationService.Api.csproj",
   "expectedPackageFiles": [

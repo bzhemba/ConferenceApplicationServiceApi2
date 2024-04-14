@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mAnZYzc0+srCc7zer9lqG9KxwmArRdRzvghFE7bdScKhD/28m6oq+WER76P7WVCkXMyHxKozbsy7g/7+lOHX0w==",
+  "dgSpecHash": "3CyIXU8oUZqLWybIRr7cb6LPeC2eXJKkS5nT4eTNT9Tbzku/bzYiC3dAHsOxbRg0nJcRKNLAGRBnV5SOcPn/Qg==",
   "success": true,
   "projectFilePath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj",
   "expectedPackageFiles": [
