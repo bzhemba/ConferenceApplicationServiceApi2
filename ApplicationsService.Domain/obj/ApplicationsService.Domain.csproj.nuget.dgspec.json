@@ -4,14 +4,14 @@
     "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/ApplicationsService.Domain.csproj": {}
   },
   "projects": {
-    "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj": {
+    "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/ApplicationsService.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj",
-        "projectName": "ApplicationsService.Abstractions",
-        "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj",
+        "projectUniqueName": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/ApplicationsService.Domain.csproj",
+        "projectName": "ApplicationsService.Domain",
+        "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/ApplicationsService.Domain.csproj",
         "packagesPath": "/Users/mariabazenova/.nuget/packages/",
-        "outputPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/obj/",
+        "outputPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mariabazenova/.nuget/NuGet/NuGet.Config"
@@ -25,7 +25,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj": {
+                "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -89,14 +93,14 @@
         }
       }
     },
-    "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/ApplicationsService.Domain.csproj": {
+    "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/ApplicationsService.Domain.csproj",
-        "projectName": "ApplicationsService.Domain",
-        "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/ApplicationsService.Domain.csproj",
+        "projectUniqueName": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj",
+        "projectName": "ConferenceApplicationService.Abstractions",
+        "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj",
         "packagesPath": "/Users/mariabazenova/.nuget/packages/",
-        "outputPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/obj/",
+        "outputPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mariabazenova/.nuget/NuGet/NuGet.Config"
@@ -110,11 +114,7 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {
-              "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj": {
-                "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

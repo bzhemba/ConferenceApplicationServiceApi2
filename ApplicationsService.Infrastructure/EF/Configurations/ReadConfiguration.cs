@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ApplicationsService.Infrastructure.EF.Configurations;
 
-internal sealed class ReadConfiguration : IEntityTypeConfiguration<ApplicationReadModel>, IEntityTypeConfiguration<ActivitiesReadModel>
+internal sealed class ReadConfiguration : IEntityTypeConfiguration<ApplicationReadModel>, IEntityTypeConfiguration<EnumReadModel>
 {
     public void Configure(EntityTypeBuilder<ApplicationReadModel> builder)
     {
@@ -13,12 +13,9 @@ internal sealed class ReadConfiguration : IEntityTypeConfiguration<ApplicationRe
         builder.HasKey(a => a.Id);
     }
 
-    public void Configure(EntityTypeBuilder<ActivitiesReadModel> builder)
+    public void Configure(EntityTypeBuilder<EnumReadModel> builder)
     {
         builder.ToTable("Activities");
         builder.HasNoKey();
-        builder.Property(activity => activity.Type)
-            .HasConversion(activity => activity.ToString(),
-                activity => (ActivityType)Enum.Parse(typeof(ActivityType), activity));
     }
 }

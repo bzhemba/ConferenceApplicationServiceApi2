@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApplicationsService.Infrastructure.Queries.Handlers;
 
-internal sealed class GetSubmittedApplicationsByDateQueryHandler : IQueryHandler<GetApplicationsByDateQuery, IEnumerable<ApplicationDto>>
+internal sealed class GetSubmittedApplicationsByDateQueryHandler : IQueryHandler<GetSubmittedApplicationsByDateQuery, IEnumerable<ApplicationDto>>
 {
     private readonly DbSet<ApplicationReadModel> _applications;
 
@@ -16,7 +16,7 @@ internal sealed class GetSubmittedApplicationsByDateQueryHandler : IQueryHandler
         _applications = context.Applications;
     }
 
-    public async Task<IEnumerable<ApplicationDto>> HandleAsync(GetApplicationsByDateQuery query)
+    public async Task<IEnumerable<ApplicationDto>> HandleAsync(GetSubmittedApplicationsByDateQuery query)
     {
         var dbQuery = _applications.AsQueryable();
         dbQuery = dbQuery.Where(application => (application.WasSent) && (application.Date > query.Date));

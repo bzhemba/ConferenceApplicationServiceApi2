@@ -509,7 +509,7 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "ApplicationsService.Abstractions/1.0.0": {
+      "ConferenceApplicationService.Abstractions/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -521,10 +521,10 @@
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "compile": {
-          "bin/placeholder/ApplicationsService.Abstractions.dll": {}
+          "bin/placeholder/ConferenceApplicationService.Abstractions.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ApplicationsService.Abstractions.dll": {}
+          "bin/placeholder/ConferenceApplicationService.Abstractions.dll": {}
         }
       }
     }
@@ -1504,15 +1504,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "ApplicationsService.Abstractions/1.0.0": {
+    "ConferenceApplicationService.Abstractions/1.0.0": {
       "type": "project",
-      "path": "../ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj",
-      "msbuildProject": "../ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj"
+      "path": "../ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj",
+      "msbuildProject": "../ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "ApplicationsService.Abstractions >= 1.0.0",
+      "ConferenceApplicationService.Abstractions >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
@@ -1547,8 +1547,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj": {
-              "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj"
+            "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj": {
+              "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj"
             }
           }
         }

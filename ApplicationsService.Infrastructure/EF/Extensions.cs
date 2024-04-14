@@ -1,9 +1,8 @@
-using ApplicationService.Shared.Options;
-using ApplicationsService.Application.Services;
 using ApplicationsService.Domain.Repositories;
 using ApplicationsService.Infrastructure.EF.Contexts;
 using ApplicationsService.Infrastructure.EF.Options;
 using ApplicationsService.Infrastructure.EF.Repositories;
+using ConferenceApplicationService.Shared.Options;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

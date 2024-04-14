@@ -19,6 +19,10 @@ internal sealed class PostgresApplicationRepository : IApplicationsRepository
     public Task<Domain.ValueObjects.Application> GetByIdAsync(ApplicationId id)
     =>
         _applications.SingleOrDefaultAsync(application => application.Id == id);
+    public Task<Domain.ValueObjects.Application> GetDraftByUserIdAsync(Guid id)
+        =>
+            _applications.SingleOrDefaultAsync(application => (application.UserId == id) 
+                                                              && (application.WasSent == false));
 
     public async Task AddAsync(Domain.ValueObjects.Application application)
     {

@@ -1,6 +1,5 @@
-using ApplicationService.Shared.Queries;
-using ApplicationsService.Abstractions.Commands;
 using ApplicationsService.Infrastructure.EF;
+using ConferenceApplicationService.Shared.Queries;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

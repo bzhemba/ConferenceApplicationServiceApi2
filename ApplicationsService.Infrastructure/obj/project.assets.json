@@ -507,68 +507,11 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "ApplicationService.Shared/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "ApplicationsService.Abstractions": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.0",
-          "Microsoft.Extensions.DependencyInjection": "7.0.0",
-          "Microsoft.OpenApi": "1.6.14",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
-          "Scrutor": "4.0.0",
-          "Swashbuckle.AspNetCore": "6.5.0"
-        },
-        "compile": {
-          "bin/placeholder/ApplicationService.Shared.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ApplicationService.Shared.dll": {}
-        }
-      },
-      "ApplicationsService.Abstractions/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.0",
-          "Microsoft.Extensions.DependencyInjection": "7.0.0",
-          "Microsoft.OpenApi": "1.6.14",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
-          "Scrutor": "4.0.0",
-          "Swashbuckle.AspNetCore": "6.5.0"
-        },
-        "compile": {
-          "bin/placeholder/ApplicationsService.Abstractions.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ApplicationsService.Abstractions.dll": {}
-        }
-      },
-      "ApplicationsService.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "ApplicationService.Shared": "1.0.0",
-          "ApplicationsService.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.0",
-          "Microsoft.Extensions.DependencyInjection": "7.0.0",
-          "Microsoft.OpenApi": "1.6.14",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
-          "Scrutor": "4.0.0",
-          "Swashbuckle.AspNetCore": "6.5.0"
-        },
-        "compile": {
-          "bin/placeholder/ApplicationsService.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ApplicationsService.Application.dll": {}
-        }
-      },
       "ApplicationsService.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "ApplicationsService.Abstractions": "1.0.0",
+          "ConferenceApplicationService.Abstractions": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.OpenApi": "1.6.14",
@@ -581,6 +524,63 @@
         },
         "runtime": {
           "bin/placeholder/ApplicationsService.Domain.dll": {}
+        }
+      },
+      "ConferenceApplicationService.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.OpenApi": "1.6.14",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
+          "Scrutor": "4.0.0",
+          "Swashbuckle.AspNetCore": "6.5.0"
+        },
+        "compile": {
+          "bin/placeholder/ConferenceApplicationService.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConferenceApplicationService.Abstractions.dll": {}
+        }
+      },
+      "ConferenceApplicationService.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ApplicationsService.Domain": "1.0.0",
+          "ConferenceApplicationService.Shared": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.OpenApi": "1.6.14",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
+          "Scrutor": "4.0.0",
+          "Swashbuckle.AspNetCore": "6.5.0"
+        },
+        "compile": {
+          "bin/placeholder/ConferenceApplicationService.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConferenceApplicationService.Application.dll": {}
+        }
+      },
+      "ConferenceApplicationService.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ConferenceApplicationService.Abstractions": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.OpenApi": "1.6.14",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
+          "Scrutor": "4.0.0",
+          "Swashbuckle.AspNetCore": "6.5.0"
+        },
+        "compile": {
+          "bin/placeholder/ConferenceApplicationService.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConferenceApplicationService.Shared.dll": {}
         }
       }
     }
@@ -1560,32 +1560,32 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "ApplicationService.Shared/1.0.0": {
-      "type": "project",
-      "path": "../ApplicationService.Shared/ApplicationService.Shared.csproj",
-      "msbuildProject": "../ApplicationService.Shared/ApplicationService.Shared.csproj"
-    },
-    "ApplicationsService.Abstractions/1.0.0": {
-      "type": "project",
-      "path": "../ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj",
-      "msbuildProject": "../ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj"
-    },
-    "ApplicationsService.Application/1.0.0": {
-      "type": "project",
-      "path": "../ApplicationsService.Application/ApplicationsService.Application.csproj",
-      "msbuildProject": "../ApplicationsService.Application/ApplicationsService.Application.csproj"
-    },
     "ApplicationsService.Domain/1.0.0": {
       "type": "project",
       "path": "../ApplicationsService.Domain/ApplicationsService.Domain.csproj",
       "msbuildProject": "../ApplicationsService.Domain/ApplicationsService.Domain.csproj"
+    },
+    "ConferenceApplicationService.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj",
+      "msbuildProject": "../ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj"
+    },
+    "ConferenceApplicationService.Application/1.0.0": {
+      "type": "project",
+      "path": "../ConferenceApplicationService.Application/ConferenceApplicationService.Application.csproj",
+      "msbuildProject": "../ConferenceApplicationService.Application/ConferenceApplicationService.Application.csproj"
+    },
+    "ConferenceApplicationService.Shared/1.0.0": {
+      "type": "project",
+      "path": "../ConferenceApplicationService.Shared/ConferenceApplicationService.Shared.csproj",
+      "msbuildProject": "../ConferenceApplicationService.Shared/ConferenceApplicationService.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "ApplicationsService.Abstractions >= 1.0.0",
-      "ApplicationsService.Application >= 1.0.0",
       "ApplicationsService.Domain >= 1.0.0",
+      "ConferenceApplicationService.Abstractions >= 1.0.0",
+      "ConferenceApplicationService.Application >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0"
     ]
   },
@@ -1614,14 +1614,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj": {
-              "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Abstractions/ApplicationsService.Abstractions.csproj"
-            },
-            "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Application/ApplicationsService.Application.csproj": {
-              "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Application/ApplicationsService.Application.csproj"
-            },
             "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/ApplicationsService.Domain.csproj": {
               "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ApplicationsService.Domain/ApplicationsService.Domain.csproj"
+            },
+            "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj": {
+              "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Abstractions/ConferenceApplicationService.Abstractions.csproj"
+            },
+            "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Application/ConferenceApplicationService.Application.csproj": {
+              "projectPath": "/Users/mariabazenova/RiderProjects/ConferenceApplicationServiceApi/ConferenceApplicationService.Application/ConferenceApplicationService.Application.csproj"
             }
           }
         }
